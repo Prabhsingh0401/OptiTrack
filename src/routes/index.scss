@@ -1,0 +1,11 @@
+.index-page{
+
+    h1{
+        margin-left: 3vw;
+        font-size: 40px;
+
+        @media screen and (max-width:768px) {
+            font-size: 30px;
+        }
+    }
+}
