@@ -101,7 +101,12 @@ export default function Inventory() {
 
   return (
     <>
-    <p className='main-heading1'>Predictive Analysis</p>
+    <p className='main-heading1'>Designed for efficiency and accuracy, it offers up-to-the-minute updates
+      , ensuring that your data is always current and accessible in a visually engaging interface.
+      <br></br><br></br>
+      Whether you're tracking inventory or managing tasks, it provides a streamlined 
+      solution for all your data needs.
+      </p>
       <Box
         width="145vw"
         height="70vh"
@@ -257,7 +262,7 @@ export default function Inventory() {
           </Box>
         </Modal>
 
-        <Stack direction="row" spacing={2} width="600px">
+        <Stack direction="row" spacing={2} width="650px">
         <TextField
         label="Search Items"
         variant="outlined"
@@ -313,7 +318,7 @@ export default function Inventory() {
           </Button>
         </Stack>
 
-        <Box width="600px" overflow="hidden">
+        <Box width="650px" overflow="hidden">
           <Box
             height="70px"
             bgcolor="#8a8a8a73" // Semi-transparent grey for header background

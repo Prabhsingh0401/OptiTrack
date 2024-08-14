@@ -23,6 +23,11 @@ export default function RootLayout() {
           <div>
             <h1>OptiTrack</h1>
           </div>
+          <div className='nav-items'>
+              <p Link to='#'>Home</p>
+              <p Link to='#'>About</p>
+              <p Link to='#'>Dashboard</p>
+          </div>
           <div>
           <SignedIn>
             <UserButton />

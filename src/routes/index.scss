@@ -9,9 +9,18 @@
         }
     }
 
+    img{
+        width: 50px;
+        position: absolute;
+        margin-left: 1vw;
+        margin-top: 1vh;
+    }
+
     h2{
+        position: absolute;
         margin-left: 3vw;
         color:#a688fa;
-        font-size: 35px;
+        font-size: 45px;
+        margin-top: 0.5vh;
     }
 }

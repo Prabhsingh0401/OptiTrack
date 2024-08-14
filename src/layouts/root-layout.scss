@@ -1,13 +1,26 @@
 .navbar{
     display: flex;
 
+    .nav-items{
+      display: flex;
+      margin-left: 20vh;
+      margin-top: 3vh;
+
+      p{
+        font-size: 15px;
+        margin-left: 11vw;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+
     h1{
         margin-left: 3vw;
-        font-size: 40px;
+        font-size: 28px;
     }
 
     button{
-        margin-left: 73vw;
+        margin-left: 25vw;
         margin-top: 4vh;
         border-radius: 8px;
         border: 1px solid transparent;
