@@ -9,7 +9,9 @@ export default function IndexPage() {
   return (
     <div className="index-page">
       <h1>Greetings, {user ? user.firstName : "Guest"}</h1>
+      <h2>Dashboard</h2>
       <Inventory></Inventory>
+      <h2>Analytics</h2>
     </div>
   );
 }

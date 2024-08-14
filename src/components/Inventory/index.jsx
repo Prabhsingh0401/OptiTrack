@@ -102,7 +102,7 @@ export default function Inventory() {
     <>
       <Box
         width="100vw"
-        height="100vh"
+        height="80vh"
         display="flex"
         justifyContent="center"
         flexDirection="column"
