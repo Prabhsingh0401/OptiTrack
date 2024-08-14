@@ -3,6 +3,8 @@ import { useUser } from '@clerk/clerk-react';
 import './index.scss'
 import Inventory from "../components/Inventory";
 
+
+
 export default function IndexPage() {
   const { user } = useUser(); // Access user data
 
