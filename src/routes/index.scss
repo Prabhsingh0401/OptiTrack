@@ -6,9 +6,9 @@
 
 }
 .img1{
-    width:360px;
+    width:340px;
     height:350px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-left: 40px;
 
    
@@ -16,10 +16,7 @@
 .container{
     display: flex;
     height:450px;
-    margin-top: 80px;
-    margin-left:6vw;
-
-
+    margin-top: 40px;
 }
 
 .glass {
@@ -29,7 +26,6 @@
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px); 
     padding: 20px;
-    box-shadow: 0 4px 32px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2);
     width:400px;
     margin-left: 150px;
     transition: all 0.3s ease;
@@ -37,6 +33,6 @@
 }
   .glass:hover {
     transform: scale(1.05);
-    box-shadow: 0 12px 36px rgba(255, 255, 255, 0.15), 0 16px 48px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.15), 0 16px 48px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
 }

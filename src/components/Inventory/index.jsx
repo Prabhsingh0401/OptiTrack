@@ -3,6 +3,7 @@ import { Box, Stack, Typography, Button, Modal, TextField } from '@mui/material'
 import { database } from '../../firebase'; // Adjust the path as needed
 import { ref, onValue, set, remove, get } from 'firebase/database';
 import './inventory.scss'
+import Chatbot from '../ChatBot';
 
 // Modal style with a dark theme
 const modalStyle = {
@@ -28,6 +29,7 @@ export default function Inventory() {
   const [itemQuantity, setItemQuantity] = useState('');
   const [itemDescription, setItemDescription] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
+  const [showChatbot, setShowChatbot] = useState(false);
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => {
@@ -99,6 +101,10 @@ export default function Inventory() {
     StockCode.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  const handleButtonClick = () => {
+    setShowChatbot(true);
+  };
+
   return (
     <>
     <p className='main-heading1'>Designed for efficiency and accuracy, it offers up-to-the-minute updates
@@ -107,6 +113,12 @@ export default function Inventory() {
       Whether you're tracking inventory or managing tasks, it provides a streamlined 
       solution for all your data needs.
       </p>
+      <button onClick={handleButtonClick} className='chatbot'>Get Help👋</button>
+      {showChatbot && (
+        <div className="chatbot-container show">
+          <Chatbot onClose={() => setShowChatbot(false)} />
+        </div>
+      )}
       <Box
         width="145vw"
         height="70vh"

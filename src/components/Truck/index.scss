@@ -1,8 +1,32 @@
-
+.truck-index-page{
 
 .main-heading{
     font-size: 30px;
     margin-left: -2vw;
+}
+
+img{
+    width: 50px;
+    position: absolute;
+    margin-left: 1vw;
+    margin-top: 1vh;
+}
+
+h2{
+    position: absolute;
+    margin-left: 3vw;
+    color:#a688fa;
+    font-size: 45px;
+    margin-top: 0.5vh;
+}
+
+h1{
+    margin-left: 3vw;
+    font-size: 40px;
+
+    @media screen and (max-width:768px) {
+        font-size: 30px;
+    }
 }
 
 .form-container {
@@ -11,7 +35,7 @@
     top: 20%; /* Adjust vertical position */
     width: 25%; /* Adjust the width of the form */
     height: 70vh; /* Increased height of the form */
-    background-color: #f9f9f9;
+    background-color: #121212;
     padding: 30px; /* Adjusted padding */
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -88,4 +112,5 @@ button {
 
 .destination-suggestions {
     top: 75px; /* Adjust this value if needed */
+}
 }

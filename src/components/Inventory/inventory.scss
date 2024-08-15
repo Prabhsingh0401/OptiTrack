@@ -4,6 +4,25 @@
     }
 }
 
+.chatbot{
+    background-color: #282828;
+    border: none;
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 10px 30px 10px 30px;
+    color: #ececec;
+    font-weight: 550;
+    position: absolute;
+    margin-top: 53vh;
+    margin-left: 3vw;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.02);
+        transition: all 0.3s ease;
+    }
+}
+
 .main-heading{
     font-size: 50px;
 

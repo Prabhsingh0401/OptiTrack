@@ -57,9 +57,9 @@ export default function TruckDashboard() {
     }, [destination]);
 
     return (
-        <div className="index-page">
+        <div className="truck-index-page">
             <h1>Greetings, {user ? user.firstName : "Guest"}</h1>
-            <h2>Dashboard <img src={Dashboard} alt="Dashboard icon" /></h2>
+            <h2 className="h2">Dashboard <img src={Dashboard} alt="Dashboard icon" /></h2>
             <p className="main-heading1">
                 Designed for optimal route planning, it offers real-time updates, ensuring that drivers receive the most efficient and accurate navigation, minimizing delays and fuel consumption.
                 <br /><br />
