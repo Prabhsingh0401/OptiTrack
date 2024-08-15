@@ -1,0 +1,26 @@
+.index-page{
+
+    h1{
+        margin-left: 3vw;
+        font-size: 40px;
+
+        @media screen and (max-width:768px) {
+            font-size: 30px;
+        }
+    }
+
+    img{
+        width: 50px;
+        position: absolute;
+        margin-left: 1vw;
+        margin-top: 1vh;
+    }
+
+    h2{
+        position: absolute;
+        margin-left: 3vw;
+        color:#a688fa;
+        font-size: 45px;
+        margin-top: 0.5vh;
+    }
+}

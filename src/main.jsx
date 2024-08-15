@@ -10,6 +10,7 @@ import SignInPage from './routes/sign-in'
 import SignUpPage from './routes/sign-up'
 import DashboardPage from './routes/dashboard'
 import InvoicesPage from './routes/invoices'
+import Inventorypage from './components/Stock'
 
 const router = createBrowserRouter([
   {
@@ -19,12 +20,14 @@ const router = createBrowserRouter([
       { path: "/contact", element: <ContactPage /> },
       { path: "/sign-in/*", element: <SignInPage /> },
       { path: "/sign-up/*", element: <SignUpPage /> },
+      { path: "/Inventory", element: <Inventorypage/> },
       {
         element: <DashboardLayout />,
         path: "dashboard",
         children: [
           { path: "/dashboard", element: <DashboardPage /> },
           { path: "/dashboard/invoices", element: <InvoicesPage /> }
+          
         ]
       }
     ]

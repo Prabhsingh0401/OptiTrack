@@ -1,21 +1,22 @@
-import { Link } from "react-router-dom";
-import { useUser } from '@clerk/clerk-react';
+import { useState } from 'react'
 import './index.scss'
-import Inventory from "../components/Inventory";
-import Dashboard from '../assets/Dashboard icon.png'
-import Analytics from '../assets/Analytics icon.png'
+import image from "../assets/image.png"
+import image1 from '../assets/inventory.png'
+import { Link } from 'react-router-dom'
 
-
-
-export default function IndexPage() {
-  const { user } = useUser(); // Access user data
+export default function IndexPage(){
 
   return (
-    <div className="index-page">
-      <h1>Greetings, {user ? user.firstName : "Guest"}</h1>
-      <h2>Dashboard <img src={Dashboard}></img></h2>
-      <Inventory></Inventory>
-      <h2>Analytics<img src={Analytics}></img></h2>
+    <>
+    <div className="container">
+       <div className='glass'>
+      <img className ='img' src={image}></img>
+      </div>
+      <div className='glass'>
+      <Link to='/Inventory'> <img className='img1' src={image1}></img></Link>
+      </div>
+
     </div>
+    </>
   );
 }

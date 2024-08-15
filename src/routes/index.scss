@@ -1,26 +1,42 @@
-.index-page{
 
-    h1{
-        margin-left: 3vw;
-        font-size: 40px;
+.img{
+    width:400px;
+    margin-top: 110px;
+    
 
-        @media screen and (max-width:768px) {
-            font-size: 30px;
-        }
-    }
+}
+.img1{
+    width:360px;
+    height:350px;
+    margin-top: 40px;
+    margin-left: 40px;
 
-    img{
-        width: 50px;
-        position: absolute;
-        margin-left: 1vw;
-        margin-top: 1vh;
-    }
+   
+}
+.container{
+    display: flex;
+    height:450px;
+    margin-top: 80px;
+    margin-left:6vw;
 
-    h2{
-        position: absolute;
-        margin-left: 3vw;
-        color:#a688fa;
-        font-size: 45px;
-        margin-top: 0.5vh;
-    }
+
+}
+
+.glass {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.1), rgba(164, 134, 247, 0.2));
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px); 
+    padding: 20px;
+    box-shadow: 0 4px 32px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.2);
+    width:400px;
+    margin-left: 150px;
+    transition: all 0.3s ease;
+   
+}
+  .glass:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 36px rgba(255, 255, 255, 0.15), 0 16px 48px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
 }
