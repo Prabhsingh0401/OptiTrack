@@ -10,7 +10,7 @@ export default function IndexPage(){
     <>
     <div className="container">
        <div className='glass'>
-      <img className ='img' src={image}></img>
+     <Link to='/Truck'><img className ='img' src={image}></img></Link> 
       </div>
       <div className='glass'>
       <Link to='/Inventory'> <img className='img1' src={image1}></img></Link>

@@ -1,0 +1,91 @@
+
+
+.main-heading{
+    font-size: 30px;
+    margin-left: -2vw;
+}
+
+.form-container {
+    position: absolute;
+    right: 5vw; /* Positioning the form on the right */
+    top: 20%; /* Adjust vertical position */
+    width: 25%; /* Adjust the width of the form */
+    height: 70vh; /* Increased height of the form */
+    background-color: #f9f9f9;
+    padding: 30px; /* Adjusted padding */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread content vertically */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Spread input fields */
+    height: 100%;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 25px;
+}
+
+.autocomplete-input {
+    width: 100%;
+    padding: 15px; /* Increased padding for larger input fields */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 15px; /* Increased padding for larger button */
+    background-color: #A688FA;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2rem; /* Increased button font size */
+    transition: background-color 0.3s;
+}
+
+/* Autocomplete suggestions dropdown */
+.autocomplete-suggestions {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%; /* Ensure the dropdown matches the input width */
+    z-index: 1000;
+}
+
+.autocomplete-suggestions li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.autocomplete-suggestions li:hover {
+    background-color: #f0f0f0;
+}
+
+/* Positioning adjustments for each dropdown */
+.location-suggestions {
+    top: 75px; /* Adjust this value if needed */
+}
+
+.destination-suggestions {
+    top: 75px; /* Adjust this value if needed */
+}
