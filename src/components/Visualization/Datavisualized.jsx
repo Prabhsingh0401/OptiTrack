@@ -1,21 +1,31 @@
 import React, { useEffect, useState } from 'react';
-import MyChart from './Chart';
+import MyChart from './QuantityDescChart';
+import StockCodeChart from './StockCodeChart';
+import './index.scss';
+import Graph from '../../assets/Graph icon.png'
+
 const Datavisualize = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
         // Fetch the JSON file
-        fetch('../../assets/csvjson.json')  // Change the path based on where your JSON file is stored
-            .then(response => response.json())  // Parse the JSON directly
+        fetch('/public/csvjson.json')  // Ensure this path is correct
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();  // Parse the JSON directly
+            })
             .then(jsonData => {
                 console.log('Fetched JSON Data:', jsonData);
 
-                // Filter out any invalid rows that might not have Description or Quantity
+                // Filter and format data
                 const formattedData = jsonData
-                    .filter(item => item.Description && item.Quantity)  // Ensure valid rows
+                    .filter(item => item.Description && !isNaN(item.Quantity) && item.StockCode)
                     .map(item => ({
-                        description: item.Description,  // Map 'Description' to Y-axis
-                        quantity: item.Quantity         // Use 'Quantity' for X-axis (no need to parse to integer)
+                        description: item.Description,  // Map 'Description' to Y-axis for QuantityChart
+                        quantity: Number(item.Quantity), // Ensure Quantity is a number
+                        stockCode: item.StockCode  // Add StockCode for the second chart
                     }));
                 
                 console.log('Formatted Data:', formattedData);  // Log the formatted data
@@ -25,8 +35,24 @@ const Datavisualize = () => {
     }, []);  // Empty dependency array means this runs once when the component mounts
 
     return (
-        <div>
-            {data.length > 0 ? <MyChart data={data} /> : <p>Loading chart...</p>}
+        <div className='data-visualisation'>
+        <h1>Graphs<img src={Graph}></img></h1>
+        <div className='main-div' style={{ display: 'flex'}}>
+            {data.length > 0 ? (
+                <>
+                    <div style={{ marginRight: '20px' }}>
+                        <h3 className='chart'>Quantity Chart</h3>
+                        <MyChart data={data} />
+                    </div>
+                    <div>
+                        <h3 className='chart'>Stock Code Chart</h3>
+                        <StockCodeChart data={data} />
+                    </div>
+                </>
+            ) : (
+                <p>Loading charts...</p>
+            )}
+        </div>
         </div>
     );
 };
