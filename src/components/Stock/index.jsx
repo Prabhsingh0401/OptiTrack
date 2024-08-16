@@ -6,6 +6,7 @@ import './index.scss'
 import Inventory from "../Inventory";
 import Dashboard from '../../assets/Dashboard icon.png';
 import Analytics from '../../assets/Analytics icon.png';
+import Datavisualize from "../Visualization/Datavisualized";
 
 export default function Inventorypage() {
   const { user } = useUser(); // Access user data
@@ -245,6 +246,7 @@ export default function Inventorypage() {
 
       {/* Result Box */}
       <Box
+
         width="300px" // Same width as the form
         padding="20px"
         boxShadow="0px 0px 15px rgba(0, 0, 0, 0.1)"
@@ -257,7 +259,10 @@ export default function Inventorypage() {
         <Typography variant="body1" color="white">
         </Typography>
       </Box>
+
     </Box>
+    <Datavisualize></Datavisualize>
     </div>
+
   );
 }
