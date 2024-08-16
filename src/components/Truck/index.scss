@@ -1,116 +1,145 @@
-.truck-index-page{
-
-.main-heading{
-    font-size: 30px;
-    margin-left: -2vw;
-}
-
-img{
-    width: 50px;
-    position: absolute;
-    margin-left: 1vw;
-    margin-top: 1vh;
-}
-
-h2{
-    position: absolute;
-    margin-left: 3vw;
-    color:#a688fa;
-    font-size: 45px;
-    margin-top: 0.5vh;
-}
-
-h1{
-    margin-left: 3vw;
-    font-size: 40px;
-
-    @media screen and (max-width:768px) {
+.truck-index-page {
+    .main-heading {
         font-size: 30px;
+        margin-left: -2vw;
     }
-}
 
-.form-container {
-    position: absolute;
-    right: 5vw; /* Positioning the form on the right */
-    top: 20%; /* Adjust vertical position */
-    width: 25%; /* Adjust the width of the form */
-    height: 70vh; /* Increased height of the form */
-    background-color: #121212;
-    padding: 30px; /* Adjusted padding */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Spread content vertically */
-}
+    img {
+        width: 50px;
+        position: absolute;
+        margin-left: 1vw;
+        margin-top: 1vh;
+    }
 
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Spread input fields */
-    height: 100%;
-}
+    h2 {
+        position: absolute;
+        margin-left: 3vw;
+        color: #a688fa;
+        font-size: 45px;
+        margin-top: 0.5vh;
+    }
 
-label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    font-size: 25px;
-}
+    h1 {
+        margin-left: 3vw;
+        font-size: 40px;
 
-.autocomplete-input {
-    width: 100%;
-    padding: 15px; /* Increased padding for larger input fields */
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    box-sizing: border-box;
-}
+        @media screen and (max-width: 768px) {
+            font-size: 30px;
+        }
+    }
 
-/* Button styling */
-button {
-    width: 100%;
-    padding: 15px; /* Increased padding for larger button */
-    background-color: #A688FA;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.2rem; /* Increased button font size */
-    transition: background-color 0.3s;
-}
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Spread input fields */
+        height: 100%;
+    }
 
-/* Autocomplete suggestions dropdown */
-.autocomplete-suggestions {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    max-height: 150px;
-    overflow-y: auto;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    width: 100%; /* Ensure the dropdown matches the input width */
-    z-index: 1000;
-}
+    label {
+        font-weight: bold;
+        margin-bottom: 8px;
+        font-size: 25px;
+    }
 
-.autocomplete-suggestions li {
-    padding: 10px;
-    cursor: pointer;
-}
+    .input-wrapper {
+        position: relative; /* Position dropdowns relative to this wrapper */
+    }
 
-.autocomplete-suggestions li:hover {
-    background-color: #f0f0f0;
-}
+    .autocomplete-input {
+        width: 100%;
+        padding: 15px; /* Increased padding for larger input fields */
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        box-sizing: border-box;
+    }
 
-/* Positioning adjustments for each dropdown */
-.location-suggestions {
-    top: 75px; /* Adjust this value if needed */
-}
+    /* Button styling */
+    button {
+        width: 100%;
+        padding: 15px; /* Increased padding for larger button */
+        background-color: #A688FA;
+        color: #fff;
+        font-weight: 600;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 15px; /* Increased button font size */
+        transition: background-color 0.3s;
+    }
 
-.destination-suggestions {
-    top: 75px; /* Adjust this value if needed */
-}
+    .form-container {
+        position: relative;
+        margin-top: -10vh;
+        left: 60vw;
+        width: 25%;
+        height: 70vh;
+        background-color: #2525257e;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .autocomplete-suggestions {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        max-height: 150px;
+        overflow-y: auto;
+        background-color: #202020;
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        width: calc(100% - 2px); /* Adjust width to fit the input field */
+        z-index: 1000;
+        overflow-x: hidden;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .autocomplete-suggestions li {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .autocomplete-suggestions li:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Position dropdowns exactly below the input fields */
+    .location-suggestions {
+        top: 100%; /* Position below the location input */
+        left: 0;
+    }
+
+    .destination-suggestions {
+        top: 100%; /* Position below the destination input */
+        left: 0;
+    }
+
+    /* Add styles for the live location icon */
+    .live-location-icon {
+        position: absolute;
+        right: 15px; /* Adjust as needed */
+        top: 35%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: #A688FA; /* Match button color */
+    }
+
+    /* Add styles for the swap locations icon */
+    .swap-locations-icon {
+        width: 30px; /* Adjust size as needed */
+        height: 30px;
+        margin: 10px 0; /* Adjust margin as needed */
+        color: #A688FA; /* Orange color */
+        cursor: pointer;
+        font-size: 1.5rem;
+        align-self: center; /* Center the icon */
+    }
 }

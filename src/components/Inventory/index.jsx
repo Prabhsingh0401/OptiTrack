@@ -298,6 +298,7 @@ export default function Inventory() {
               '& input': {
                 color: '#fff', // Text color in the input
               },
+              
             },
           },
         }}
